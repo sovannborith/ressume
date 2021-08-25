@@ -1,45 +1,37 @@
 {
   "main": {
-    "name": "Sonny Sangha",
-    "occupation": "CEO of PAPA",
-    "description": "I eat, sleep and breathe React",
+    "name": "Sovannborith Yun",
+    "occupation": "Freelance Developer",
+    "description": "Live with learning new front-end tech",
     "image": "profilepic.jpg",
-    "bio": "Hi there! I am Sonny! You might also know me as PAPA React. I've been coding for over 10 years now. As a Full Stack developer I've worked both with startups and large corporations to help build & scale their companies. Along the journey I realised my passion existed in helping others excel and pursue their dreams as upcoming developers. With this passion, I have now trained thousand's of developers across the globe. Through live coaching sessions on Youtube, I have accumulated several MILLION views demonstrating how to apply developer skills in a range of cool builds and challenges. I deliver REAL VALUE by teaching REAL WORLD projects to help students enter the world of web development. You’ll get hands-on experience and learn the skills that are required to succeed in the real-world in this community.",
+    "bio": "Hi there! I am Borith! You might also know me as Sovannborith. I've been coding for over 15 years now. As a Full Stack developer I have been working as the developer for 15+ years starting from Window to Web and recently intested with new front-end tech including React, Angular and mobile development using React-Native.",
     "contactmessage": "Get in touch with me to be a part of the PAPA fam!",
-    "email": "papareact.team@gmail.com",
-    "phone": "+44 1234567899",
+    "email": "yun.sovannborith@gmail.com",
+    "phone": "+855 12544618",
     "address": {
-      "street": "123 Dev Lane",
-      "city": "London",
-      "state": "Devosphere",
-      "zip": "W3B D3V"
+      "street": "#7AEo, St 7, Borey Piphupthey Chamkardong",
+      "city": "Phnom Penh",
+      "state": "Cambodia",
+      "zip": "NA"
     },
-    "website": "https://www.papareact.com/course",
-    "resumedownload": "http://papareact.com",
+    "website": "https://fivewave.netlify.app/",
+    "resumedownload": "#",
     "social": [
-      {
-        "name": "youtube",
-        "url": "https://www.youtube.com/channel/UCqeTj_QAnNlmt7FwzNwHZnA",
-        "className": "fa fa-youtube"
-      },
+      
       {
         "name": "facebook",
-        "url": "https://www.facebook.com/sonny.sangha.3",
+        "url": "https://www.facebook.com/profile.php?id=100012749022747",
         "className": "fa fa-facebook"
       },
       {
         "name": "linkedin",
-        "url": "https://www.linkedin.com/in/saajansangha",
+        "url": "https://www.linkedin.com/in/sovannborith-yun-876980111/",
         "className": "fa fa-linkedin"
       },
-      {
-        "name": "instagram",
-        "url": "https://www.instagram.com/ssssangha/",
-        "className": "fa fa-instagram"
-      },
+      
       {
         "name": "github",
-        "url": "https://github.com/PapaReact",
+        "url": "https://github.com/sovannborith",
         "className": "fa fa-github"
       }
     ]
@@ -48,62 +40,80 @@
     "skillmessage": "My Programming Language Proficiency",
     "education": [
       {
-        "school": "University of Kent - UK",
-        "degree": "Bachelor's Degree, Computer Science",
+        "school": "National University of Management (NUM) - Cambodia",
+        "degree": "Master Degree, MBA",
+        "graduated": "2015",
+        "description": "Graduated"
+      },
+      {
+        "school": "Build Bright University (BBU) - Cambodia",
+        "degree": "Bachelor & Master Degree, Computer Science",
         "graduated": "July 2016",
-        "description": "Graduated with First Class Honours"
+        "description": "Graduated"
       }
     ],
     "work": [
       {
-        "company": "PAPA",
-        "title": "Founder and CEO",
-        "years": "May 2019 - Present",
-        "description": "Cloning all the apps possible. On the way to clone the world! Building the PAPA Fam as large as possible."
+        "company": "Manulife Cambodia",
+        "title": "IT People Leader",
+        "years": "Mar 2019 - Present",
+        "description": "Oversee IT Operations."
+      },
+      {
+        "company": "Infinity General Insurance",
+        "title": "System Administrator",
+        "years": "Jul 2007 - Jan 2011",
+        "description": "Over IT application and infrastructure."
       }
     ],
     "skills": [
       {
         "name": "ReactJs",
-        "level": "100%"
+        "level": "80%"
       },
       {
-        "name": "Python",
-        "level": "85%"
+        "name": "Angular",
+        "level": "80%"
       },
       {
-        "name": "Git",
+        "name": "React-Native",
         "level": "70%"
       },
       {
         "name": "JavaScript",
-        "level": "99%"
+        "level": "90%"
       },
       {
         "name": "Web Development",
-        "level": "95%"
+        "level": "85%"
       }
     ]
   },
   "portfolio": {
     "projects": [
       {
-        "title": "Snapchat Clone (React JS)",
+        "title": "Infinity Quick Quote",
         "category": "",
-        "image": "snapchat.jpg",
-        "url": "https://youtu.be/1kGISk5ft2w"
+        "image": "exp_02.png",
+        "url": "#"
       },
       {
-        "title": "Gmail Clone (React JS)",
+        "title": "Online Recruitment",
         "category": "",
-        "image": "gmail.jpg",
-        "url": "https://youtu.be/b7nrXjS6Dqs"
+        "image": "exp_04.png",
+        "url": "#"
       },
       {
-        "title": "LinkedIn Clone (React JS)",
+        "title": "Insurance HealthCare Portal",
         "category": "",
-        "image": "linkedin.jpg",
-        "url": "https://youtu.be/QaYts9sPmcY"
+        "image": "exp_06.png",
+        "url": "#"
+      },
+      {
+        "title": "Advertizing Website",
+        "category": "",
+        "image": "exp_09.png",
+        "url": "#"
       }
     ]
   },
