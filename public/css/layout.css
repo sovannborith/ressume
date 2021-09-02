@@ -21,8 +21,11 @@
 /* ------------------------------------------------------------------ */
 /* a. General Styles
 /* ------------------------------------------------------------------ */
+/*===== VARIABLES CSS =====*/
 
-body { background: #0f0f0f; }
+body{ 
+   background-color: #fff;
+}
 
 /* ------------------------------------------------------------------ */
 /* b. Header Styles
@@ -30,6 +33,8 @@ body { background: #0f0f0f; }
 
 header {
    position: relative;
+   top: 0;
+   left: 0;
    height: 800px;
    min-height: 500px;
    width: 100%;
@@ -38,6 +43,7 @@ header {
 	-webkit-background-size: cover !important;
    text-align: center;
    overflow: hidden;
+   
 }
 
 /* vertically center banner section */
@@ -121,35 +127,41 @@ header .scrolldown a:hover { color: #11ABB0; }
 
 /* primary navigation
 --------------------------------------------------------------------- */
-#nav-wrap ul, #nav-wrap li, #nav-wrap a {
+/* #nav-wrap ul, #nav-wrap li, #nav-wrap a {
 	 margin: 0;
 	 padding: 0;
 	 border: none;
 	 outline: none;
-}
+} */
+
+
 
 /* nav-wrap */
-#nav-wrap {
+/* #nav-wrap {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
    font: 12px 'opensans-bold', sans-serif;
    width: 100%;
    text-transform: uppercase;
    letter-spacing: 2.5px;
    margin: 0 auto;
-   z-index: 100;
+   z-index: 10;
    position: fixed;
    left: 0;
    top: 0;
-}
+   
+} */
 .opaque { background-color: #333; }
 
-/* hide toggle button */
-#nav-wrap > a.mobile-btn { display: none; }
+/* .nav-list{
+   display:flex;
+} */
 
-ul#nav {
+/* ul#nav {
    min-height: 48px;
    width: auto;
 
-   /* center align the menu */
    text-align: center;
 }
 ul#nav li {
@@ -157,12 +169,10 @@ ul#nav li {
    list-style: none;
    height: 48px;
    display: inline-block;
-}
+} */
 
 /* Links */
-ul#nav li a {
-
-/* 8px padding top + 8px padding bottom + 32px line-height = 48px */
+/* ul#nav li a {
 
    display: inline-block;
    padding: 8px 13px;
@@ -176,10 +186,156 @@ ul#nav li a {
 	-o-transition: color .2s ease-in-out;
 	-ms-transition: color .2s ease-in-out;
 	transition: color .2s ease-in-out;
-}
+} */
 
-ul#nav li a:active { background-color: transparent !important; }
-ul#nav li.current a { color: #F06000; }
+/* ul#nav li a:active { background-color: transparent !important; }
+ul#nav li.current a { color: #F06000; } */
+
+
+ .nav {
+   width: 100%;
+   top: 0px;
+   left: 0;
+   position: fixed;
+   height: 80px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 84px;
+   background: null;
+   z-index: 100;
+ }
+ @media screen and (max-width: 768px) {
+   .nav__menu {
+     position: fixed;
+     top: 4.5rem;
+     right: -100%;
+     width: 100%;
+     height: 100%;
+     padding: 2rem;
+     background-color: rgba(255, 255, 255, 0.3);
+     transition: 0.5s;
+     backdrop-filter: blur(10px);
+     z-index: 100;
+   }
+ }
+ .nav__item {
+   margin-bottom: 2rem;
+   text-transform: uppercase;
+ }
+ .nav__link {
+   position: relative;
+   color: darkgray;
+ }
+ .nav__link:hover {
+   color: blue;
+ }
+ .nav__logo {
+   width: 80px;
+   height: 80px;
+ }
+ 
+ .nav__toggle {
+   font-size: 1rem;
+   width: 40px;
+   height: 40px;
+   cursor: pointer;
+   background-color: blue;
+   border-color: white;
+   border-style: solid;
+   border-width: 2px;
+   border-radius: 50%;
+ }
+ .nav__toggle > div {
+   position: relative;
+   width: 20px;
+   height: 2px;
+   background-color: #fff;
+   transition: 0.4s;
+   top: 12px;
+   left: 8px;
+   transition: all 0.4s ease;
+ }
+ .nav__toggle > div:before {
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 2px;
+   border-radius: 1.5px;
+   background-color: #fff;
+   top: 5px;
+   left: 0;
+   transition: 0.4s;
+ }
+ 
+ .nav__toggle > div:after {
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 2px;
+   border-radius: 1.5px;
+   background-color: #fff;
+   top: 10px;
+   left: 0;
+   transition: 0.4s;
+ }
+ .toggle > div {
+   transform: rotate(-45deg) translate(-4px, 5px);
+ }
+ .toggle > div:before {
+   opacity: 0;
+ }
+ .toggle > div:after {
+   transform: rotate(90deg) translate(-10px, 0px);
+ }
+ /*=== Show menu ===*/
+ .show {
+   right: 0;
+ }
+ 
+ /*Active menu*/
+ .active::after {
+   position: absolute;
+   content: "";
+   width: 100%;
+   height: 0.18rem;
+   left: 0;
+   top: 2rem;
+   background-color: green;
+ }
+ /* ===== MEDIA QUERIES =====*/
+@media screen and (min-width: 768px) {
+   
+   .nav {
+     height: 84px;
+   }
+   .nav__list {
+     display: flex;
+   }
+   .nav__item {
+     margin-left: 2rem;
+     margin-bottom: 0;
+   }
+   .nav__toggle {
+     display: none;
+   }
+   .nav__link {
+     color: white;
+   }
+   .nav__link:hover {
+     color: white;
+   }
+   .active::after {
+     background-color:white;
+   }
+ 
+ @media screen and (min-width: 1024px) {
+   .bd-grid {
+     margin-left: auto;
+     margin-right: auto;
+   }
+ }
+ /* -- end of Nav*/
 
 
 /* ------------------------------------------------------------------ */

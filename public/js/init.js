@@ -4,6 +4,7 @@
 /*
 -----------------------------------------------------------------------------------*/
 
+
  jQuery(document).ready(function($) {
 
 /*----------------------------------------------------*/
@@ -15,31 +16,112 @@
 	 }, 100);
 
 
-/*----------------------------------------------------*/
-/* Smooth Scrolling
------------------------------------------------------- */
 
-   $('.smoothscroll').on('click',function (e) {
-	    e.preventDefault();
+    /*===== Mobile menu show/hide =====*/
+    const showMenu = (toggleId, navId) => {
+      const toggle = document.getElementById(toggleId),
+      nav = document.getElementById(navId);
+   
+      if (toggle && nav) {
+      toggle.addEventListener("click", () => {
+         nav.classList.toggle("show");
+         toggle.classList.toggle("toggle");
+      });
+      }
+   };
+   showMenu("nav-toggle", "nav-menu");
 
-	    var target = this.hash,
+   /*===== End of Mobile menu show/hide =====*/
+
+   /*===== Hide mobile menu on links click =====*/
+   function linkAction() {
+      const navMenu = document.getElementById("nav-menu");
+      navMenu.classList.remove("show");
+      const toggle = document.getElementById("nav-toggle");
+      toggle.classList.remove("toggle");
+   }
+   const navLinks = document.querySelectorAll(".nav__link");
+   
+   navLinks.forEach((n) => n.addEventListener("click", (e)=>{ 
+      //if mobile menu, then hide after click on link 
+      e.preventDefault();    
+      linkAction();
+
+      $(".nav__list a").removeClass("active");
+      n.classList.add("active");
+      var target = n.hash;
 	    $target = $(target);
+
+       //$('.nav__menu a[href="' + target + '"').classList.add("active");
 
 	    $('html, body').stop().animate({
 	        'scrollTop': $target.offset().top
 	    }, 800, 'swing', function () {
 	        window.location.hash = target;
 	    });
-	});
+   }));
+
+   /* ===== end of hide mobile mene on links click =====*/
+
+
+   /*----------------------------------------------------*/
+   /* Smooth Scrolling
+   ------------------------------------------------------ */
+   
+   /*===== REMOVE MENU MOBILE =====*/
+   
+   /*===== SCROLL SECTIONS ACTIVE LINK =====*/
+   /* const sections = document.querySelectorAll("section[id]");
+
+   window.addEventListener("scroll", scrollActive);
+
+   function scrollActive() {
+   const scrollY = window.pageYOffset;
+
+   sections.forEach((current) => {
+      const sectionHeight = current.offsetHeight;
+      const sectionTop = current.offsetTop - 50;
+      sectionId = current.getAttribute("id");
+
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+         document
+         .querySelector(".nav__menu a[href*=" + sectionId + "]")
+         .classList.add("active");
+      } else {
+         document
+         .querySelector(".nav__menu a[href*=" + sectionId + "]")
+         .classList.remove("active");
+      }
+   });
+} */
+   /* const navLink = document.querySelectorAll(".nav__link");
+   navLink.forEach((n) => n.addEventListener("click", linkAction)); */
+
+   /* const markActive =() => {
+       $(".nav__link").classList.remove("active");
+       
+	    var target = this.hash;
+	    $target = $(target);
+
+       $('.nav__menu a[href="' + target + '"').classList.add("active");
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 800, 'swing', function () {
+	        window.location.hash = target;
+	    });       
+       
+	}; */
 
 
 /*----------------------------------------------------*/
 /* Highlight the current section in the navigation bar
 ------------------------------------------------------*/
 
-	var sections = $("section");
-	var navigation_links = $("#nav-wrap a");
+	/* var sections = $("section");
+	var navigation_links = $(".nav__link");
 
+   document.querySelector(".nav__menu a").classList.remove("active");
 	sections.waypoint({
 
       handler: function(event, direction) {
@@ -47,17 +129,15 @@
 		   var active_section;
 
 			active_section = $(this);
-			if (direction === "up") active_section = active_section.prev();
-
-			var active_link = $('#nav-wrap a[href="#' + active_section.attr("id") + '"]');
-
-         navigation_links.parent().removeClass("current");
-			active_link.parent().addClass("current");
-
-		},
+         var sectionId = active_section.attr("id");
+			if (direction === "up") {
+            active_section = active_section.prev();            
+         }
+         //document.querySelector('.nav__menu a[href="#' + sectionId + '"]').classList.add("active"); 
+			
+      },
 		offset: '35%'
-
-	});
+	}); */
 
 
 /*----------------------------------------------------*/
@@ -81,7 +161,7 @@
 
 		var h = $('header').height();
 		var y = $(window).scrollTop();
-      var nav = $('#nav-wrap');
+      var nav = $('.nav');
 
 	   if ( (y > h*.20) && (y < h) && ($(window).outerWidth() > 768 ) ) {
 	      nav.fadeOut('fast');

@@ -20,42 +20,42 @@ const Header = ({ data }) => {
 
   return (
     <header id="home">
-      <nav id="nav-wrap">
-        <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
-          Show navigation
-        </a>
-        <a className="mobile-btn" href="#home" title="Hide navigation">
-          Hide navigation
-        </a>
-
-        <ul id="nav" className="nav">
-          <li className="current">
-            <a className="smoothscroll" href="#home">
-              Home
-            </a>
-          </li>
-          <li>
-            <a className="smoothscroll" href="#about">
-              About
-            </a>
-          </li>
-          <li>
-            <a className="smoothscroll" href="#resume">
-              Resume
-            </a>
-          </li>
-          <li>
-            <a className="smoothscroll" href="#portfolio">
-              Works
-            </a>
-          </li>
-          
-          <li>
-            <a className="smoothscroll" href="#contact">
-              Contact
-            </a>
-          </li>
-        </ul>
+      
+      <nav class="nav bd-grid">
+        <div>
+        <a href="#home" class="nav__logo">
+            <img
+              src="../../images/logo_transparent.png"
+              alt="Fivewave"
+              width="70"
+              height="70"
+            />
+          </a>
+        </div>
+        
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#home" class="nav__link active">Home</a>
+              </li>
+              <li class="nav__item">
+                <a href="#about" class="nav__link">About</a>
+              </li>
+              <li class="nav__item">
+                <a href="#resume" class="nav__link">Resume</a>
+              </li>
+              <li class="nav__item">
+                <a href="#portfolio" class="nav__link">Portfolio</a>
+              </li>
+              <li class="nav__item">
+                <a href="#contact" class="nav__link">Contact</a>
+              </li>
+            </ul>
+        </div>
+        
+        <div class="nav__toggle" id="nav-toggle">
+          <div></div>
+        </div>
       </nav>
 
       <div className="row banner">
@@ -72,7 +72,7 @@ const Header = ({ data }) => {
       </div>
 
       <p className="scrolldown">
-        <a className="smoothscroll" href="#about">
+        <a className="nav__link" href="#about">
           <i className="icon-down-circle"></i>
         </a>
       </p>
